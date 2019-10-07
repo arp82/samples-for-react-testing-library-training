@@ -1,0 +1,1 @@
+export { getListOfFruit } from './myApi';
