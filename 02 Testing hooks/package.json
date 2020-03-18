@@ -10,7 +10,7 @@
     "test": "jest -c ./config/test/jest.json --verbose",
     "test:watch": "jest -c ./config/test/jest.json --verbose --watchAll -i"
   },
-  "author": "Lemoncode",
+  "author": "arp82",
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^4.1.3",
