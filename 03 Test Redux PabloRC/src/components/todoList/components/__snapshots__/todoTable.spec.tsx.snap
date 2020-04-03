@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoTableComponent should render as expected 1`] = `
+<div
+  className="row"
+>
+  <table
+    className="table"
+  >
+    <thead>
+      <tr>
+        <th>
+          UserId
+        </th>
+        <th>
+          Id
+        </th>
+        <th>
+          Title
+        </th>
+        <th>
+          Completed
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <Component
+        key="1"
+        todo={
+          Object {
+            "completed": true,
+            "id": 1,
+            "title": "Hacer la compra",
+            "userId": 1,
+          }
+        }
+      />
+      <Component
+        key="2"
+        todo={
+          Object {
+            "completed": false,
+            "id": 2,
+            "title": "Ir al gimnasio",
+            "userId": 1,
+          }
+        }
+      />
+    </tbody>
+  </table>
+</div>
+`;

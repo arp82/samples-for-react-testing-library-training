@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoRowComponent should render as expected 1`] = `
+<tr>
+  <td>
+    <span>
+      1
+    </span>
+  </td>
+  <td>
+    <span>
+      1
+    </span>
+  </td>
+  <td>
+    <span>
+      Hacer la compra
+    </span>
+  </td>
+  <td>
+    <span>
+      Completada
+    </span>
+  </td>
+</tr>
+`;

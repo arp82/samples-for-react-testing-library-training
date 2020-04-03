@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodosAreaContainer debe pintar TodoAreaComponent cuando tenemos todos 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(TodoAreaComponent)>
+    <TodoAreaComponent
+      loadTodos={[Function]}
+    >
+      <Component>
+        <div
+          className="row"
+        >
+          <table
+            className="table"
+          >
+            <thead>
+              <tr>
+                <th>
+                  UserId
+                </th>
+                <th>
+                  Id
+                </th>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Completed
+                </th>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+        </div>
+      </Component>
+    </TodoAreaComponent>
+  </Connect(TodoAreaComponent)>
+</Provider>
+`;
