@@ -1,0 +1,35 @@
+@tableBorder: 1px solid black;
+@headerColor: gainsboro;
+@evenTrColor:  #ffe8e8;
+@oddTrColor: white;
+
+.messages-table{
+    border: @tableBorder;
+    width: 80%;
+    border-collapse: collapse;
+
+    td, th {
+        border: @tableBorder;
+    };
+
+    thead{
+        tr{
+            background-color: @headerColor;
+            text-align: left;
+        }
+    }
+
+    tbody{
+        tr{
+            &:nth-child(even){
+                background-color: @evenTrColor;
+            }
+    
+            &:nth-child(odd){
+                background-color: @oddTrColor;
+            }
+        }
+
+    }
+   
+};

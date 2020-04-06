@@ -1,0 +1,30 @@
+//Variables
+@backgroundColor: white;
+@borderColor: black;
+@borderRadius: 10px;
+
+.message-form{
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 16px;
+    background-color: @backgroundColor;
+    border-radius: @borderRadius;
+    border: 1px solid @borderColor;
+    overflow: hidden;
+    position: relative;
+
+    textarea {
+        resize: none;
+    }
+
+    button{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: @borderColor;
+        border: @borderColor;
+        color: @backgroundColor;
+    }
+};
