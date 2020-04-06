@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { MyComponent } from './myComponent';
+import { MessagesSection } from './components';
 
 export const App: React.FunctionComponent = props => (
   <div>
-    <MyComponent nameFromProps="Fruit User" />
+    <MessagesSection />
   </div>
 );

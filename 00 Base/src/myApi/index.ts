@@ -1,1 +1,1 @@
-export { getListOfFruit } from './myApi';
+export { setMessage, getListOfMessages, anotherTest } from './myApi';
