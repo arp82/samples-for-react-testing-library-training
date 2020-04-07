@@ -4,7 +4,7 @@ const initialState = {
     messages:  []
 }
 
-function MessagesReducer(state = initialState, action) {
+export function MessagesReducer(state = initialState, action) {
     switch (action.type) {
       case ADD_MESSAGE:
         const messages = [
@@ -28,4 +28,4 @@ function MessagesReducer(state = initialState, action) {
     }
 }
 
-export default  MessagesReducer
+

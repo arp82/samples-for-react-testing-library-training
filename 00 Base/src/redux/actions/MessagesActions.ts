@@ -1,4 +1,4 @@
-import { getListOfMessages, setMessage, } from '../../myApi'
+import { getListOfMessages, setMessage, } from '../../API'
 
 export const GET_ALL = 'GET_MESSAGES'
 export const ADD_MESSAGE = 'ADD_MESSAGE'

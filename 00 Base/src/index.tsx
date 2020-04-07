@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { App } from './app';
 import { Provider } from 'react-redux'
 import { createStore, compose, applyMiddleware } from 'redux'
-import MessagesReducer from './redux/reducers/MessagesReducer'
+import {MessagesReducer} from './redux/reducers/MessagesReducer'
 import thunk from 'redux-thunk'
 
 const MessagesStore = createStore(MessagesReducer,compose(applyMiddleware(thunk)));

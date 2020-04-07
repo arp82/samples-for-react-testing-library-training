@@ -1,1 +1,0 @@
-export { setMessage, getListOfMessages, anotherTest } from './myApi';

@@ -1,24 +1,24 @@
 import * as BEApi from './myBackEndApiEndpoint';
 
-export const getListOfMessages = (): Promise<Object[]> => {
+export interface Message{
+  id : number,
+  subject: string,
+  body: string,
+}
+
+export const getListOfMessages = (): Promise<Message[]> => {
   return BEApi.getMessages()
     .then(resolveMessages)
     .catch(handleError);
 }
 
-export const anotherTest = () => {
-}
-
-export const setMessage = (message : Object) : Promise<Object[]> => {
+export const setMessage = (message : Object) : Promise<Message[]> => {
   return BEApi.addMessage(message)
     .then(resolveMessages)
     .catch(handleError);
 }
 
-
-
-
-const resolveMessages = (listOfMessages: Object[]) => {
+const resolveMessages = (listOfMessages: Message[]) => {
   return listOfMessages;
 }
 
