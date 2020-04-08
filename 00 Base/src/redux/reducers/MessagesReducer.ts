@@ -7,16 +7,23 @@ const initialState = {
 export function MessagesReducer(state = initialState, action) {
     switch (action.type) {
       case ADD_MESSAGE:
-        const messages = [
+
+        const filterFunction = (array) => {
+          const filteredArray = array.filter((item, index)=>{
+            return item.id == index;
+          }) 
+
+          return filteredArray;
+        }
+
+        const messageArray = [
           ...state.messages,
           action.payload,
-        ].filter((item, index)=>{
-          return item.id == index;
-        }) 
+        ]
         
         return{
           ...state,
-          messages: messages,
+          messages: filterFunction(messageArray),
         }
       case GET_ALL:
         return {
