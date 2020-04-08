@@ -1,1 +1,1 @@
-export { setMessage, getListOfMessages } from './myApi';
+export { setMessage, getListOfMessages, Message} from './myApi';

@@ -1,10 +1,13 @@
-let messages = [
-  {id: 0, subject: 'Hello world', body: 'Hello world'},
-  {id: 1, subject: 'Hello world again', body: 'Hello world again'},
-]
+import axios from 'axios';
+
+let messages = [];
+const API_URL = 'https://my-json-server.typicode.com/Dacalez/demo/messages';
 
 export const getMessages= () => {
-  return Promise.resolve(messages);
+  return axios.get(API_URL ).then(response => {
+    messages = response.data
+    return Promise.resolve(messages);
+  })
 }
 
 export const addMessage = (newMessage) =>{

@@ -1,4 +1,4 @@
-import MessagesReducer from './MessagesReducer';
+import {MessagesReducer} from './MessagesReducer';
 import { GET_ALL, ADD_MESSAGE } from '../actions/MessagesActions'
 import expect from 'expect';
 
@@ -28,8 +28,12 @@ describe('Messages Reducer', () =>{
         expect(MessagesReducer(undefined, {})).toEqual({messages: []})
     })
 
-    it('should save in the state GET_ALL action data', () =>{
-        expect(MessagesReducer({}, getAllAction)).toEqual({messages: getAllAction.payload});
+    it('should GET_ALL action retrieves all messages in payload', () =>{
+        const initialState = {
+            messages: [],
+        }
+
+        expect(MessagesReducer(initialState, getAllAction)).toEqual({messages: getAllAction.payload});
     })
     
     it('should add a new message with ADD_MESSAGE data', () =>{

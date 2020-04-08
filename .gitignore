@@ -12,3 +12,4 @@ junit.xml
 /reports/
 /.awcache
 /.vscode
+*.awcache

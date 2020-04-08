@@ -1,13 +1,6 @@
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
 import expect from 'expect';
 import * as actions from './MessagesActions';
 import * as BEApi from '../../API/myBackEndApiEndpoint'
-import { getListOfMessages, setMessage, } from '../../API'
-
-
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
 
 
 const newMessage = {body: 'Important appointment', subject: 'Urgent'}
@@ -29,7 +22,7 @@ describe('MessagesActions', () => {
         })
     })
 
-    it('should get all messages returns all messages', () => {
+    it('should add Message return newMessage in its payload', () => {
         BEApi.addMessage(newMessage).then(response => {
             let result = {
                 type: actions.ADD_MESSAGE,
@@ -39,14 +32,4 @@ describe('MessagesActions', () => {
             expect(actions.addMessage(newMessage)).toBe(result);
         })
     })
-
-    // it('should getAllMessages to call getListOfMessages', () =>{
-    //     actions.getAllMessages();
-    //     expect(getListOfMessages).toHaveBeenCalled();
-    // })
-
-    // it('should get all messages to call getListOfMessages', () =>{
-    //     actions.addMessage(newMessage);
-    //     expect(setMessage).toHaveBeenCalledWith(newMessage);
-    // })
 });

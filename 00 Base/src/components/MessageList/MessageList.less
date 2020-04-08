@@ -1,35 +1,29 @@
 @tableBorder: 1px solid black;
-@headerColor: gainsboro;
-@evenTrColor:  #ffe8e8;
-@oddTrColor: white;
+@headerBackgroundColor: gainsboro;
+@evenTrBackgroundColor:  #ffe8e8;
+@oddTrBackgroundColor: white;
 
 .messages-table{
     border: @tableBorder;
     width: 80%;
     border-collapse: collapse;
-
     td, th {
         border: @tableBorder;
     };
-
     thead{
         tr{
-            background-color: @headerColor;
+            background-color: @headerBackgroundColor;
             text-align: left;
         }
     }
-
     tbody{
         tr{
             &:nth-child(even){
-                background-color: @evenTrColor;
+                background-color: @evenTrBackgroundColor;
             }
-    
             &:nth-child(odd){
-                background-color: @oddTrColor;
+                background-color: @oddTrBackgroundColor;
             }
         }
-
     }
-   
 };

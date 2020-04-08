@@ -2,9 +2,9 @@ import * as React from 'react';
 import  { shallow }  from 'enzyme';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import  MessageList from './../MessageList/MessageList';
+import  {MessageList} from './MessageList';
 
-describe('Message Form component test', () => {
+describe('Message List component test', () => {
     configure({ adapter: new Adapter() });
 
     let component;

@@ -5,7 +5,7 @@ export const ADD_MESSAGE = 'ADD_MESSAGE'
 
 export const addMessage = message => {
   return (dispatch) => {
-    setMessage(message).then(response => {      
+    setMessage(message).then(response => {
       var action = {
         type: ADD_MESSAGE,
         payload: response[response.length - 1],

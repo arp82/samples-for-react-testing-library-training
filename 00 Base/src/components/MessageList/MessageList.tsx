@@ -1,43 +1,26 @@
 import React from 'react';
+import { Message } from '../../API';
 import './MessageList.less'
 
 interface MessageListProps {
-    messages: any[];
+    messages: Message[],
 }
 
-class MessageList extends React.Component<MessageListProps> {
-    constructor(props) {
-        super(props);
-    }
-
-
-    render() {
-        const { messages } = this.props;
-
-        return (
-            <table className="messages-table">
-                <thead>
-                    <tr>
-                        <th>Subject</th>
-                        <th>Body</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                            messages.map( message => {
-                                return (
-                                    <tr key={message.id}>
-                                        <td>{message.subject}</td>
-                                        <td>{message.body}</td>
-                                    </tr>
-                                )
-                            })
-                        }
-                </tbody>
-            </table>
-        );
-    }
+export const MessageList  = (props : MessageListProps) => {
+    return (<table className="messages-table">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            {props.messages.map(message => {
+                return (<tr key={message.id}>
+                    <td>{message.subject}</td>
+                    <td>{message.body}</td>
+                </tr>);
+            })}
+        </tbody>
+    </table>);
 }
-
-
-export default MessageList

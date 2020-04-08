@@ -1,33 +1,30 @@
 import React from 'react';
 import { addMessage} from '../../redux/actions/MessagesActions'
 import { connect } from 'react-redux'
+import { Message } from '../../API';
 import './MessageForm.less';
 
-
 interface MessageFormProps {
-    messages: any[],
-    addMessage: any,
+    messages: Message[],
+    addMessage?: (newMessage : Message)  => Promise<void>,
 }
 
 interface MessageFormState {
-    newMessage: any
+    newMessage: Message
 }
 
-
-class MessageForm extends React.Component<MessageFormProps, MessageFormState>{
+export class MessageFormComponent extends React.Component<MessageFormProps, MessageFormState>{
     constructor(props) {
         super(props);
 
         this.state = {
             newMessage: this.setNewMessage()
         };
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     setNewMessage(){
         let newMessage = {
+            id: -1,
             subject: '',
             body: '',
         }
@@ -66,10 +63,10 @@ class MessageForm extends React.Component<MessageFormProps, MessageFormState>{
         return (
             <form className="message-form">
                 <label htmlFor="subject">Subject</label>
-                <input value={newMessage.subject} onChange={this.handleChange} name='subject' type="text" />
+                <input value={newMessage.subject} onChange={(event) => this.handleChange(event)} name='subject' type="text" />
                 <label htmlFor="body">Body</label>
-                <textarea name="body" value={newMessage.body} onChange={this.handleChange} cols={30} rows={10}></textarea>
-                <button onClick={this.handleSubmit}>Send</button>
+                <textarea name="body" value={newMessage.body} onChange={(event) => {this.handleChange(event)}} cols={30} rows={10}></textarea>
+                <button onClick={(event) => {this.handleSubmit(event)}}>Send</button>
             </form>
         );
     }
@@ -81,4 +78,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(MessageForm)
+const MessageForm = connect(null, mapDispatchToProps)(MessageFormComponent);
+export {MessageForm};
