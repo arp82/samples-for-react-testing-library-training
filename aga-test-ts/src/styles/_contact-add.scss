@@ -1,0 +1,35 @@
+.contact-add {
+  width: 100%;
+  position: relative;
+  &__btn {
+    @include btn();
+    width: 70px;
+    background-color: #36b03c;
+    font-size: 20px;
+    padding: 15px 10px;
+    margin-top: 20px;
+    &:focus {
+      -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+      -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+      box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+    }
+    &:hover {
+      background-color: #37b93d;
+    }
+  }
+  &__input {
+    @include input();
+    width: 20%;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    &:focus {
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+      box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
+      border: 2px solid #a5cda5;
+      background-color: #e9f3e9;
+      color: #428c42;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.contact-loading {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  outline: none;
+  &__title {
+    margin-top: 20px;
+  }
+  &__spinner {
+    height: 110px;
+    margin: 20px;
+  }
+}

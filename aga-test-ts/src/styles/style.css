@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+.container {
+  padding-top: 20px;
+  background: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  min-width: 500px;
+  max-width: 80%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
+          box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
+  padding: 3rem;
+}
+
+.container-title {
+  margin-bottom: auto;
+  margin-top: 0;
+  line-height: 1;
+}
+
 html,
 body {
   width: 100%;
@@ -10,55 +42,24 @@ body {
   color: #2e2e2e;
   font-size: 18px;
   line-height: 1.5;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: #b3b3ff;
   background: linear-gradient(45deg, #b3b3ff, #8080ff);
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-.contacts-app {
-  padding-top: 20px;
-  min-width: 800px;
-  max-width: 80%;
-  min-height: 480px;
-  max-height: 60%;
-  background: #fafafa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#root {
+  padding-top: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
-          box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
-  padding: 3rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.contacts-title {
-  margin-bottom: auto;
-  margin-top: 0;
-  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 600px;
 }
 
 .contact-loading {
@@ -81,50 +82,50 @@ body {
   margin: 20px;
 }
 
-.add-contact {
+.contact-add {
   width: 100%;
   position: relative;
 }
 
-.add-contact__btn {
+.contact-add__btn {
   font-family: "Varela Round", sans-serif;
-  width: 70px;
-  background-color: #36b03c;
-  font-size: 20px;
   color: white;
-  padding: 15px 10px;
-  margin-top: 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   letter-spacing: 2px;
   outline: none;
+  width: 70px;
+  background-color: #36b03c;
+  font-size: 20px;
+  padding: 15px 10px;
+  margin-top: 20px;
 }
 
-.add-contact__btn:focus {
+.contact-add__btn:focus {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
   box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
 }
 
-.add-contact__btn:hover {
+.contact-add__btn:hover {
   background-color: #37b93d;
 }
 
-.add-contact__input {
-  width: 20%;
+.contact-add__input {
   background-color: #efefef;
   color: #666;
   border: 2px solid #ddd;
   border-radius: 5px;
-  font-size: 20px;
-  padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+  width: 20%;
+  font-size: 20px;
+  padding: 10px;
   margin: 10px;
 }
 
-.add-contact__input:focus {
+.contact-add__input:focus {
   -webkit-box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
   box-shadow: 0px 0px 10px 2px rgba(204, 204, 204, 0.9);
   border: 2px solid #a5cda5;
@@ -139,14 +140,14 @@ body {
 .contact-row__input {
   background-color: #efefef;
   color: #666;
-  width: 200px;
   border: 2px solid #ddd;
   border-radius: 5px;
-  font-size: 15px;
-  padding: 3px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+  width: auto;
+  font-size: 15px;
+  padding: 3px;
 }
 
 .contact-row__input:focus {
@@ -157,19 +158,23 @@ body {
   color: #8c7242;
 }
 
+.contact-row__input {
+  max-width: 80%;
+}
+
 .contact-row__btn {
-  margin-left: auto;
   font-family: "Varela Round", sans-serif;
-  width: auto;
-  background-color: #e0841a;
-  font-size: 15px;
   color: white;
-  padding: 5px 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   letter-spacing: 2px;
   outline: none;
+  margin-left: auto;
+  width: auto;
+  background-color: #e0841a;
+  font-size: 15px;
+  padding: 5px 5px;
 }
 
 .contact-row__btn.delete {

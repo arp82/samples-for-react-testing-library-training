@@ -8,13 +8,12 @@ export interface Props {
 }
 
 export const Contact: FC<Props> = ({ contact, onDelete, onChange }) => {
-  const initialEmail = contact.email;
-  const [state, setState] = useState(false);
-  const [email, setEmail] = useState(initialEmail);
+  const [showEdit, setShowEdit] = useState(false);
+  const [email, setEmail] = useState("");
 
   const handleChange = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    setState(true);
+    setShowEdit(true);
   };
 
   const handleSave = (
@@ -22,7 +21,7 @@ export const Contact: FC<Props> = ({ contact, onDelete, onChange }) => {
     contact: ContactType
   ) => {
     e.preventDefault();
-    setState(false);
+    setShowEdit(false);
     const updatedContact = { ...contact, email: email };
     onChange(updatedContact);
   };
@@ -35,9 +34,12 @@ export const Contact: FC<Props> = ({ contact, onDelete, onChange }) => {
     onDelete(contact);
   };
 
-  let input;
-  if (state === true) {
-    input = (
+  // Edit form let change email.
+  // By default edit form is hide. 
+  // It appers when "change email" button is clicked.
+  let editForm;
+  if (showEdit === true) {
+    editForm = (
       <React.Fragment>
         <td>
           <input
@@ -77,7 +79,7 @@ export const Contact: FC<Props> = ({ contact, onDelete, onChange }) => {
           </button>
         </td>
       </tr>
-      <tr>{input}</tr>
+      <tr>{editForm}</tr>
     </React.Fragment>
   );
 };

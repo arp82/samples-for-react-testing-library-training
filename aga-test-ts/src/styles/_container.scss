@@ -1,0 +1,21 @@
+.container {
+  padding-top: 20px;
+  background: #fafafa;
+  display: flex;
+  margin: 0;
+  min-width: 500px;
+  max-width: 80%;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
+  padding: 3rem;
+}
+
+.container-title {
+  margin-bottom: auto;
+  margin-top: 0;
+  line-height: 1;
+}
