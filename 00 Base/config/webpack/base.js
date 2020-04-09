@@ -9,6 +9,9 @@ module.exports = merge(
     context: helpers.resolveFromRootPath('src'),
     resolve: {
       extensions: ['.js', '.ts', '.tsx'],
+      modules: [
+        'node_modules'
+      ]   
     },
     entry: {
       app: ['./index.tsx'],
