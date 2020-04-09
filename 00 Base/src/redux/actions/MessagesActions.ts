@@ -5,7 +5,7 @@ export const ADD_MESSAGE = 'ADD_MESSAGE'
 
 export const addMessage = message => {
   return (dispatch) => {
-    setMessage(message).then(response => {
+    return setMessage(message).then(response => {
       var action = {
         type: ADD_MESSAGE,
         payload: response[response.length - 1],
@@ -19,7 +19,7 @@ export const addMessage = message => {
 
 export const getAllMessages = () => {
   return (dispatch) => {
-    getListOfMessages().then(response => {
+    return getListOfMessages().then(response => {
       var action = {
         type: GET_ALL,
         payload: response

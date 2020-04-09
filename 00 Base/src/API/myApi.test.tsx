@@ -10,6 +10,7 @@ describe('API test', () => {
             body: 'Hello world 3',
             subject: 'Hello world 3'
         }
-        expect(setMessage(newMessage)).resolves.toHaveLength(3);
+        expect(setMessage(newMessage)).resolves.toHaveLength(1);
+        expect(getListOfMessages()).resolves.toHaveLength(3);
     })
 }) 
