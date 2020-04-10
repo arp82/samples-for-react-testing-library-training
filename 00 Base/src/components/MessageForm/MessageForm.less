@@ -1,0 +1,27 @@
+@whiteColor: white;
+@blackColor: black;
+@borderRadius: 10px;
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 16px;
+    background-color: @whiteColor;
+    border-radius: @borderRadius;
+    border: 1px solid @blackColor;
+    overflow: hidden;
+    position: relative;
+    textarea {
+        resize: none;
+    }
+    button {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: @blackColor;
+        border: @blackColor;
+        color: @whiteColor;
+    }
+};

@@ -9,6 +9,9 @@ module.exports = merge(
     context: helpers.resolveFromRootPath('src'),
     resolve: {
       extensions: ['.js', '.ts', '.tsx'],
+      modules: [
+        'node_modules'
+      ]   
     },
     entry: {
       app: ['./index.tsx'],
@@ -23,8 +26,16 @@ module.exports = merge(
             useBabel: true,
             useCache: true,
             babelCore: '@babel/core',
-          },
+          }
         },
+        {
+          test: /\.less$/,
+          use: [
+            { loader: 'style-loader' },
+            { loader: 'css-loader' },
+            { loader: 'less-loader' }
+          ]
+        }
       ],
     },
     optimization: {
