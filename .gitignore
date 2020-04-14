@@ -4,7 +4,6 @@ dist/
 *.orig
 .idea/
 src/api/resources/db.json
-db.json
 coverage/
 src/api/apiUtils.ts
 *.iml

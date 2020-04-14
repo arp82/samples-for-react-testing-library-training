@@ -1,0 +1,176 @@
+{
+  "projects": [
+    {
+      "id": 2,
+      "name": "Hola",
+      "technology": "3G/4G",
+      "customer_network": {},
+      "status": "closed (errors)"
+    },
+    {
+      "id": 5,
+      "name": "DOP Project",
+      "technology": "4G",
+      "customer_network": ["Bouygues_eLTE"],
+      "status": "closed"
+    },
+    {
+      "id": 6,
+      "name": "Dataset+Project",
+      "technology": "4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 7,
+      "name": "Multitech",
+      "technology": "3G/4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 8,
+      "name": "DOP 3G",
+      "technology": "3G",
+      "customer_network": ["Celcom_eWCDMA"],
+      "status": "closed"
+    },
+    {
+      "id": 9,
+      "name": "Import+Project",
+      "technology": "4G",
+      "customer_network": ["Bouygues_eLTE"],
+      "status": "closed"
+    },
+    {
+      "id": 10,
+      "name": "Dos Palabras",
+      "technology": "4G",
+      "customer_network": ["Bouygues_eLTE"],
+      "status": "closed"
+    },
+    {
+      "id": 11,
+      "name": "Otras+dos",
+      "technology": "4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 12,
+      "name": "uno+dos+tres+cuatro",
+      "technology": "3G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 13,
+      "name": "DOP Project 2",
+      "technology": "4G",
+      "customer_network": ["Bouygues_eLTE"],
+      "status": "closed"
+    },
+    {
+      "id": 14,
+      "name": "prueba",
+      "technology": "4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 15,
+      "name": "dfxcxcxc",
+      "technology": "4G",
+      "customer_network": ["Bouygues_eLTE"],
+      "status": "closed"
+    },
+    {
+      "id": 18,
+      "name": "PruebaRafa",
+      "technology": "4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 21,
+      "name": "Santi+testing",
+      "technology": "4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 23,
+      "name": "TEST_Multi_DTAC",
+      "technology": "3G/4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 25,
+      "name": "Multi+Yoigo",
+      "technology": "3G/4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 29,
+      "name": "ahora_voy_a_validar_3g_solo",
+      "technology": "3G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 30,
+      "name": "ahora_voy_a_validar_3g_solo2",
+      "technology": "3G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 31,
+      "name": "ahora_voy_a_validar_4g_solo",
+      "technology": "4G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 32,
+      "name": "edanmri_testing",
+      "technology": "3G",
+      "customer_network": [null],
+      "status": "closed"
+    },
+    {
+      "id": 33,
+      "name": "edanmri_testing_4g",
+      "technology": "4G",
+      "customer_network": ["Bouygues_eLTE"],
+      "status": "closed (errors)"
+    },
+    {
+      "id": 35,
+      "name": "DemoSprint2020.13",
+      "technology": "4G",
+      "customer_network": [
+        "new(\"defaultBindingFunction\", .Data = function (value) ",
+        "{",
+        "    if (missing(value)) ",
+        "        `.->customer_network`",
+        "    else {",
+        "        methods:::.setDummyField(.self, \".->customer_network\", ",
+        "            \"character\", \"customer_network\", FALSE, value)",
+        "        value",
+        "    }",
+        "}, field = \"customer_network\", className = \"character\")"
+      ],
+      "status": "closed"
+    },
+    {
+      "id": 36,
+      "name": "DemoSprint20.13Part2",
+      "technology": "4G",
+      "customer_network": ["bouyguesCF_eLTE"],
+      "status": "closed"
+    }
+  ]
+}
