@@ -7,6 +7,7 @@ describe('API test', () => {
 
 	it('should set messages return three messages', () => {
 		const newMessage = {
+			id: 3,
 			body: 'Hello world 3',
 			subject: 'Hello world 3'
 		};
