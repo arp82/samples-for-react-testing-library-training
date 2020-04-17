@@ -1,4 +1,6 @@
-# samples-for-react-testing-library-training
+# Samples-for-react-tests
+## The first 3 folders are a tutorial using react testing library
+## Last folder is a recopilation of samples for tests using redux architecture
 
 This repository provides a step-by-step tutorial on how to use React Testing Library and React Hooks Testing Library to write basic tests. The structure of the project consists of:
 - 00 Base: base project used to start each of the other tutorials
