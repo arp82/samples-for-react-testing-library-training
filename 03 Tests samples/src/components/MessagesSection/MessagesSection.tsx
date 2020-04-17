@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageForm, MessageList } from '../index';
-import { connect } from 'react-redux'
-import { getAllMessages } from '../../redux/actions/MessagesActions'
+import { connect } from 'react-redux';
+import { getAllMessages } from '../../redux/actions/MessagesActions';
 import './MessagesSection.less';
 import { Message } from '../../model';
 
@@ -12,43 +12,43 @@ interface MessagesSectionProps {
 
 export class MessagesSectionComponent extends React.Component<MessagesSectionProps> {
     static defaultProps = {
-        messages: [],
+    	messages: [],
     }
 
     constructor(props) {
-        super(props);
-        this.state = {
-            messages: [],
-        };
+    	super(props);
+    	this.state = {
+    		messages: [],
+    	};
     }
 
     componentDidMount() {
-        this.props.getMessages();
+    	this.props.getMessages();
     }
 
     render() {
-        const { messages } = this.props;
+    	const { messages } = this.props;
 
-        return (
-            <div className='message-section'>
-                <MessageForm messages={messages} />
-                <MessageList messages={messages} />
-            </div>
-        )
+    	return (
+    		<div className="message-section">
+    			<MessageForm messages={messages} />
+    			<MessageList messages={messages} />
+    		</div>
+    	);
     }
 }
 
 const mapStateToProps = state => {
-    return {
-        messages: state.messages
-    }
-}
+	return {
+		messages: state.messages
+	};
+};
 
 const mapDispatchToProps = dispatch => {
-    return {
-        getMessages: () => dispatch(getAllMessages())
-    }
-}
+	return {
+		getMessages: () => dispatch(getAllMessages())
+	};
+};
 
 const MessagesSection = connect(mapStateToProps, mapDispatchToProps)(MessagesSectionComponent);
 export { MessagesSection };

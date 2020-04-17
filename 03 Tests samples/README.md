@@ -14,7 +14,7 @@
    - Message list test: [ListComponent](./src/components/MessageList/MessageList.test.tsx)
    - Message section test: [SectionComponent](./src/components/MessagesSection/MessagesSection.test.tsx)
    
-- **Model** test sample:
+- **Model-mappers** test sample:
 
 - Tests samples for events onChange, onScroll, etc..
 - Tests samples for useSuscribeToScroll
