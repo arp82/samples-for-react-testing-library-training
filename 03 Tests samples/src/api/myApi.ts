@@ -7,7 +7,7 @@ export const getListOfMessages = (): Promise<Message[]> => {
     .catch(handleError);
 }
 
-export const setMessage = (message : Object) : Promise<Message[]> => {
+export const setMessage = (message : Message) : Promise<Message[]> => {
   return BEApi.addMessage(message)
     .then(resolveMessages)
     .catch(handleError);
