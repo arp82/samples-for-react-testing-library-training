@@ -1,10 +1,5 @@
 import * as BEApi from './myBackEndApiEndpoint';
-
-export interface Message{
-  id : number,
-  subject: string,
-  body: string,
-}
+import { Message } from '../model';
 
 export const getListOfMessages = (): Promise<Message[]> => {
   return BEApi.getMessages()

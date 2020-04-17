@@ -1,12 +1,12 @@
 import React from 'react';
-import { Message } from '../../API';
 import './MessageList.less'
+import { Message } from '../../model';
 
 interface MessageListProps {
     messages: Message[],
 }
 
-export const MessageList  = (props : MessageListProps) => {
+export const MessageList = (props: MessageListProps) => {
     return (<table className="messages-table">
         <thead>
             <tr>

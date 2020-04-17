@@ -1,12 +1,12 @@
 import React from 'react';
-import { addMessage} from '../../redux/actions/MessagesActions'
+import { addMessage } from '../../redux/actions/MessagesActions'
 import { connect } from 'react-redux'
-import { Message } from '../../API';
+import { Message } from '../../model';
 import './MessageForm.less';
 
 interface MessageFormProps {
     messages: Message[],
-    addMessage?: (newMessage : Message)  => Promise<void>,
+    addMessage?: (newMessage: Message) => Promise<void>,
 }
 
 interface MessageFormState {
@@ -22,38 +22,37 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
         };
     }
 
-    setNewMessage(){
+    setNewMessage() {
         let newMessage = {
             id: -1,
             subject: '',
             body: '',
         }
-
         return newMessage;
     }
 
-    handleSubmit(event){
+    handleSubmit(event) {
         event.preventDefault();
-       let { addMessage } = this.props;
-       let { newMessage } = this.state;
-       
-       addMessage(newMessage);
+        let { addMessage } = this.props;
+        let { newMessage } = this.state;
 
-       const emptyMessage = this.setNewMessage();
-       this.setState({
-           newMessage: emptyMessage
+        addMessage(newMessage);
+
+        const emptyMessage = this.setNewMessage();
+        this.setState({
+            newMessage: emptyMessage
         })
     }
 
     handleChange(event) {
         const target = event.target;
         const name = target.name;
-        let {newMessage} = this.state;
+        let { newMessage } = this.state;
 
         newMessage[name] = target.value
 
         this.setState({
-          newMessage
+            newMessage
         });
     }
 
@@ -63,20 +62,27 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
         return (
             <form className="message-form">
                 <label htmlFor="subject">Subject</label>
-                <input value={newMessage.subject} onChange={(event) => this.handleChange(event)} name='subject' type="text" />
+                <input
+                    value={newMessage.subject}
+                    onChange={(event) => this.handleChange(event)}
+                    name='subject' type="text" />
                 <label htmlFor="body">Body</label>
-                <textarea name="body" value={newMessage.body} onChange={(event) => {this.handleChange(event)}} cols={30} rows={10}></textarea>
-                <button onClick={(event) => {this.handleSubmit(event)}}>Send</button>
+                <textarea
+                    name="body"
+                    value={newMessage.body}
+                    onChange={(event) => { this.handleChange(event) }}
+                    cols={30} rows={10}></textarea>
+                <button onClick={(event) => { this.handleSubmit(event) }}>Send</button>
             </form>
         );
     }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch, _ownProps) => {
     return {
-      addMessage: (newMessage) => dispatch(addMessage(newMessage))
+        addMessage: (newMessage) => dispatch(addMessage(newMessage))
     }
 }
 
 const MessageForm = connect(null, mapDispatchToProps)(MessageFormComponent);
-export {MessageForm};
+export { MessageForm };
