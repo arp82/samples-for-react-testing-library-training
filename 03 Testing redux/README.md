@@ -14,5 +14,9 @@
    - Message section test: [SectionComponent](./src/components/MessagesSection/MessagesSection.test.tsx)
 - **Model** test sample:
 
+- Tests samples for events onChange, onScroll, etc....
+- Tests samples for useSuscribeToScroll
+- Tests samples using ref an useRef hook
+
 
 
