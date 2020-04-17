@@ -78,7 +78,7 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
 	}
 }
 
-const mapDispatchToProps = (dispatch, _ownProps) => {
+const mapDispatchToProps = (dispatch) => {
 	return {
 		addMessage: (newMessage) => dispatch(addMessage(newMessage))
 	};

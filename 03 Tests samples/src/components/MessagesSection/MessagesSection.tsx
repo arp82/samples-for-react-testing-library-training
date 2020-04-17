@@ -6,36 +6,36 @@ import './MessagesSection.less';
 import { Message } from '../../model';
 
 interface MessagesSectionProps {
-    getMessages: () => Promise<void>,
-    messages?: Message[];
+	getMessages: () => Promise<void>,
+	messages?: Message[];
 }
 
 export class MessagesSectionComponent extends React.Component<MessagesSectionProps> {
-    static defaultProps = {
-    	messages: [],
-    }
+	static defaultProps = {
+		messages: [],
+	}
 
-    constructor(props) {
-    	super(props);
-    	this.state = {
-    		messages: [],
-    	};
-    }
+	constructor(props) {
+		super(props);
+		this.state = {
+			messages: [],
+		};
+	}
 
-    componentDidMount() {
-    	this.props.getMessages();
-    }
+	componentDidMount() {
+		this.props.getMessages();
+	}
 
-    render() {
-    	const { messages } = this.props;
+	render() {
+		const { messages } = this.props;
 
-    	return (
-    		<div className="message-section">
-    			<MessageForm messages={messages} />
-    			<MessageList messages={messages} />
-    		</div>
-    	);
-    }
+		return (
+			<div className="message-section">
+				<MessageForm messages={messages} />
+				<MessageList messages={messages} />
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = state => {
