@@ -1,4 +1,4 @@
-# Testing redix architecture 
+# Testing redux architecture 
 
 ## In this folder you can see tests samples for redux architecture.
 
