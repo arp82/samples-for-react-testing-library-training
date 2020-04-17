@@ -1,12 +1,18 @@
 # Testing redux architecture 
 
-## In this folder you can see tests samples for redux architecture.
+## In this folder you can see tests samples.
 
-- Here make a link to action test files samples [actionTest](./src/redux/actions/MessagesActions.test.tsx)
+- **Redux architecture** test samples:
 
-- The same here for reducers test files 
-- The same here for api files tests
-- The same here for components file tests
+  - Action test files samples: [MessageActionTest](./src/redux/actions/MessagesActions.test.tsx)
+
+  - Reducers test files: [MessageReducerTest](./src/redux/reducers/Mesages.Reducer.test.tsx)
+- **API** test sample: [ApiTest](./src/api/myApi.test.tsx)
+- **Components** test samples:
+   - Message form test: [FormComponent](./src/components/MessageForm/MessageForm.test.tsx)
+   - Message list test: [ListComponent](./src/components/MessageList/MessageList.test.tsx)
+   - Message section test: [SectionComponent](./src/components/MessagesSection/MessagesSection.test.tsx)
+- **Model** test sample:
 
 
 
