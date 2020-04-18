@@ -9,10 +9,9 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: cd '03 Tests samples'
-            - run: npm install
-            - run: npm run lint
-            - run: npm test
+            - run: cd '03 Tests samples' && npm install
+            - run: cd '03 Tests samples' && npm run lint
+            - run: cd '03 Tests samples' && npm test
 workflows:
   build-and-test:
     jobs:
