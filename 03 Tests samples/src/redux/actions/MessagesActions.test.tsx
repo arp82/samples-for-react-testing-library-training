@@ -1,6 +1,6 @@
 import expect from 'expect';
 import * as actions from './MessagesActions';
-import * as BEApi from '../../API/myBackEndApiEndpoint';
+import * as BEApi from '../../api/myBackEndApiEndpoint';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
