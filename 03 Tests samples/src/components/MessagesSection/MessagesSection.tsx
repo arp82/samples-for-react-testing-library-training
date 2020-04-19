@@ -31,7 +31,7 @@ export class MessagesSectionComponent extends React.Component<MessagesSectionPro
 
 		return (
 			<div className="message-section">
-				<h1>Messages management sample</h1>
+				<h1>Messages management sample, deployed</h1>
 				<MessageForm messages={messages} />
 				<MessageList messages={messages} />
 			</div>
