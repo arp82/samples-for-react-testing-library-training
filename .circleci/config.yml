@@ -1,4 +1,6 @@
 version: 2.1
+user.name: 'dailymp@gmail.com'
+user.email: 'dailymp@gmail.com'
 orbs:
   node: circleci/node@1.1.6
 jobs:
