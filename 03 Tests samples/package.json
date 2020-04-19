@@ -1,4 +1,5 @@
 {
+  "homepage": "https://dailymp.github.io/samples-for-react-testing-library-training/",
   "name": "react-testing-by-example",
   "version": "1.0.0",
   "description": "Learn testing by sample using jest + react-testing-library, each of the samples contains a readme.md file that indicates the purpose of the sample plus an step by step guide to reproduce it.",
@@ -11,7 +12,9 @@
     "test:watch": "jest -c ./config/test/jest.json --verbose --watchAll -i",
     "start:server": "json-server db.json",
     "lint": "./node_modules/.bin/eslint src/**/*.ts src/**/*.tsx",
-    "lint-fixup": "./node_modules/.bin/eslint src --ext .ts,.tsx --fix"
+    "lint-fixup": "./node_modules/.bin/eslint src --ext .ts,.tsx --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "arp82, dailymp",
   "license": "MIT",
@@ -56,6 +59,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-react": "^7.19.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
     "json-server": "^0.16.1",
