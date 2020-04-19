@@ -13,6 +13,7 @@ jobs:
             - run: cd '03 Tests samples' && npm run lint-fixup
             - run: cd '03 Tests samples' && npm run lint
             - run: cd '03 Tests samples' && npm test
+            - run: cd '03 Tests samples' && npm run deploy
 workflows:
   build-and-test:
     jobs:
