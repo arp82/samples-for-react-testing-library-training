@@ -5,4 +5,4 @@ React Testing Library is a library built on DOM Testing Library to provide suppo
 This repository covers some guided examples to introduce briefly React Testing Library and React Hooks Testing Library to write tests using Jest. For further examples, you may check some of the resources below
 - https://react-hooks-testing-library.com/
 - https://testing-library.com/docs/intro
-- https://github.com/Lemoncode/react-testing-by-example
+- https://github.com/Lemoncode/samples-for-react-testing
