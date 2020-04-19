@@ -1,6 +1,4 @@
 version: 2.1
-user.name: 'dailymp@gmail.com'
-user.email: 'dailymp@gmail.com'
 orbs:
   node: circleci/node@1.1.6
 jobs:
@@ -15,6 +13,9 @@ jobs:
             - run: cd '03 Tests samples' && npm run lint-fixup
             - run: cd '03 Tests samples' && npm run lint
             - run: cd '03 Tests samples' && npm test
+            - run: git config --global -l
+            - run: git config --global user.email dailymp@gmail.com
+            - run: git config --global user.name dailymp
             - run: cd '03 Tests samples' && npm run deploy
 workflows:
   build-and-test:
