@@ -1,5 +1,5 @@
 import * as React from 'react';
-import  { shallow }  from 'enzyme';
+import  { shallow, mount }  from 'enzyme';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import sinon from 'sinon';
@@ -10,7 +10,7 @@ describe('Message Form component test', () => {
 	configure({ adapter: new Adapter() });
 
 
-	let component, addMessageSpy;
+	let component, addMessageSpy, truncComponent;
 	let event = {
 		preventDefault: () => {
 		}};
@@ -24,6 +24,7 @@ describe('Message Form component test', () => {
 		};
 		jest.spyOn(event, 'preventDefault');
 		component = shallow(< MessageFormComponent {...props}/>);
+		truncComponent = mount(< MessageFormComponent {...props}/>);
 	});
 
 	it('should render message form properyl', () =>{
@@ -37,6 +38,13 @@ describe('Message Form component test', () => {
 	it('should click on component button call add Message', () => {
 		component.find('button').simulate('click', event);
 		expect(addMessageSpy.calledOnce).toBe(true);
+	});
+
+	it('should click on component div',()=>{
+		truncComponent.find('.dButton').simulate('click');
+	  const consoleSpy = jest.spyOn(console, 'log');
+  	console.log('clicked');
+  	expect(consoleSpy).toHaveBeenCalledWith('clicked');
 	});
 
 	it('should handleChange change input and textarea values', ()=>{

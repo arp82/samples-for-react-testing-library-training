@@ -30,7 +30,9 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
 		};
 		return newMessage;
 	}
-
+	handleOnClick = (event) => {
+		console.log("clicked")
+}
 	handleSubmit(event) {
 		event.preventDefault();
 		let { addMessage } = this.props;
@@ -73,6 +75,7 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
 					onChange={(event) => { this.handleChange(event); }}
 					cols={30} rows={10}></textarea>
 				<button onClick={(event) => { this.handleSubmit(event); }}>Send</button>
+				<div  onClick={this.handleOnClick} className="dButton"> Hi, click me! </div>
 			</form>
 		);
 	}
