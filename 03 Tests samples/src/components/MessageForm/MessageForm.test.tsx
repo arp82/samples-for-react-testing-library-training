@@ -43,9 +43,9 @@ describe('Message Form component test', () => {
 
 	it('should click on component div',()=>{
 		truncComponent.find('.dButton').simulate('click');
-	  const consoleSpy = jest.spyOn(console, 'log');
-  	console.log('clicked');
-  	expect(consoleSpy).toHaveBeenCalledWith('clicked');
+		const consoleSpy = jest.spyOn(console, 'log');
+		console.log('clicked');
+		expect(consoleSpy).toHaveBeenCalledWith('clicked');
 	});
 
 	it('should handleChange change input and textarea values', ()=>{

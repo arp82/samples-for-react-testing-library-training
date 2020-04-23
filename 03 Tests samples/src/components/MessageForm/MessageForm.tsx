@@ -30,7 +30,7 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
 		};
 		return newMessage;
 	}
-	handleOnClick = (event) => {
+	handleOnClick = () => {
 		console.log("clicked")
 }
 	handleSubmit(event) {
