@@ -33,6 +33,7 @@ describe('Message Form component test', () => {
 		expect(component.find('.message-form input')).toHaveLength(1);
 		expect(component.find('.message-form textarea')).toHaveLength(1);
 		expect(component.find('.message-form button')).toHaveLength(1);
+		expect(component.find('.message-form div')).toHaveLength(1);
 	});
 
 	it('should click on component button call add Message', () => {
