@@ -17,7 +17,7 @@
 - **Model-mappers** test sample:
 
 - Tests samples for events onChange ( simulate, fireEvent, ...) (Regina)
-- Tests samples for events onClick (Aurora)
+- Tests samples for events onClick [simulateClick](./src/redux/actions/MessagesActions.test.tsx)
 - Tests samples for events onScroll (Daily)
 - Test samples for onMouseUp and onMouseDown (Regina)
 - Test samples for onContextMenu (Regina)
