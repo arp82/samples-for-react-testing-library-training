@@ -31,6 +31,7 @@ export class MessagesSectionComponent extends React.Component<MessagesSectionPro
 	}
 	handleCallAlert(event){
 		alert("Hello! I am an alert box!");
+		console.log("alert",event);
 	}
 	render() {
 		const { messages } = this.props;

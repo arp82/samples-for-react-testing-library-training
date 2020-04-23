@@ -24,7 +24,6 @@ describe('Message Form component test', () => {
 		};
 		jest.spyOn(event, 'preventDefault');
 		component = shallow(< MessageFormComponent {...props}/>);
-		truncComponent = mount(< MessageFormComponent {...props}/>);
 	});
 
 	it('should render message form properyl', () =>{
