@@ -5,7 +5,7 @@ import {MessagesSection} from './MessagesSection/MessagesSection';
 
 
 export {
-	MessageList,
-	MessageForm,
-	MessagesSection,
+  MessageList,
+  MessageForm,
+  MessagesSection,
 };

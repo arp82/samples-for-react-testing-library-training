@@ -16,15 +16,14 @@
    
 - **Model-mappers** test sample:
 
-- Tests samples for events onChange ( simulate, fireEvent, ...) (Regina)
-- Tests samples for events onClick (Aurora)
-- Tests samples for events onScroll (Daily)
-- Test samples for onMouseUp and onMouseDown (Regina)
-- Test samples for onContextMenu (Regina)
-- Test samples for onSubmit (Aurora)
-
-- Tests samples for useSuscribeToScroll (Daily)
-- Tests samples using ref an useRef hook (Regina, Daily)
+- Tests samples for events onChange ( simulate, fireEvent, ...) 
+- Tests samples for events onClick 
+- Tests samples for events onScroll 
+- Test samples for onMouseUp and onMouseDown
+- Test samples for onContextMenu 
+- Test samples for onSubmit
+- Tests samples for useSuscribeToScroll 
+- Tests samples using ref an useRef hook 
 
 
 

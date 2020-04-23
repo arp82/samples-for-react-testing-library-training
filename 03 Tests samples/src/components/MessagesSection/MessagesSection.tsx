@@ -6,50 +6,55 @@ import './MessagesSection.less';
 import { Message } from '../../model';
 
 interface MessagesSectionProps {
-	getMessages: () => Promise<void>,
-	messages?: Message[];
+  getMessages: () => Promise<void>;
+  messages?: Message[];
 }
 
-export class MessagesSectionComponent extends React.Component<MessagesSectionProps> {
-	static defaultProps = {
-		messages: [],
-	}
+export class MessagesSectionComponent extends React.Component<
+  MessagesSectionProps
+> {
+  static defaultProps = {
+    messages: [],
+  };
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			messages: [],
-		};
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      messages: [],
+    };
+  }
 
-	componentDidMount() {
-		this.props.getMessages();
-	}
+  componentDidMount() {
+    this.props.getMessages();
+  }
 
-	render() {
-		const { messages } = this.props;
+  render() {
+    const { messages } = this.props;
 
-		return (
-			<div className="message-section">
-				<h1>Messages management sample, deployed</h1>
-				<MessageForm messages={messages} />
-				<MessageList messages={messages} />
-			</div>
-		);
-	}
+    return (
+      <div className="message-section">
+        <h1>Messages management sample, deployed</h1>
+        <MessageForm messages={messages} />
+        <MessageList messages={messages} />
+      </div>
+    );
+  }
 }
 
-const mapStateToProps = state => {
-	return {
-		messages: state.messages
-	};
+const mapStateToProps = (state) => {
+  return {
+    messages: state.messages,
+  };
 };
 
-const mapDispatchToProps = dispatch => {
-	return {
-		getMessages: () => dispatch(getAllMessages())
-	};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getMessages: () => dispatch(getAllMessages()),
+  };
 };
 
-const MessagesSection = connect(mapStateToProps, mapDispatchToProps)(MessagesSectionComponent);
+const MessagesSection = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MessagesSectionComponent);
 export { MessagesSection };

@@ -14,74 +14,74 @@ interface MessageFormState {
 }
 
 export class MessageFormComponent extends React.Component<MessageFormProps, MessageFormState>{
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.state = {
-			newMessage: this.setNewMessage()
-		};
-	}
+    this.state = {
+      newMessage: this.setNewMessage()
+    };
+  }
 
-	setNewMessage() {
-		let newMessage = {
-			id: -1,
-			subject: '',
-			body: '',
-		};
-		return newMessage;
-	}
+  setNewMessage() {
+    let newMessage = {
+      id: -1,
+      subject: '',
+      body: '',
+    };
+    return newMessage;
+  }
 
-	handleSubmit(event) {
-		event.preventDefault();
-		let { addMessage } = this.props;
-		let { newMessage } = this.state;
+  handleSubmit(event) {
+    event.preventDefault();
+    let { addMessage } = this.props;
+    let { newMessage } = this.state;
 
-		addMessage(newMessage);
+    addMessage(newMessage);
 
-		const emptyMessage = this.setNewMessage();
-		this.setState({
-			newMessage: emptyMessage
-		});
-	}
+    const emptyMessage = this.setNewMessage();
+    this.setState({
+      newMessage: emptyMessage
+    });
+  }
 
-	handleChange(event) {
-		const target = event.target;
-		const name = target.name;
-		let { newMessage } = this.state;
+  handleChange(event) {
+    const target = event.target;
+    const name = target.name;
+    let { newMessage } = this.state;
 
-		newMessage[name] = target.value;
+    newMessage[name] = target.value;
 
-		this.setState({
-			newMessage
-		});
-	}
+    this.setState({
+      newMessage
+    });
+  }
 
-	render() {
-		let { newMessage } = this.state;
+  render() {
+    let { newMessage } = this.state;
 
-		return (
-			<form className="message-form">
-				<label htmlFor="subject">Subject</label>
-				<input
-					value={newMessage.subject}
-					onChange={(event) => this.handleChange(event)}
-					name='subject' type="text" />
-				<label htmlFor="body">Body</label>
-				<textarea
-					name="body"
-					value={newMessage.body}
-					onChange={(event) => { this.handleChange(event); }}
-					cols={30} rows={10}></textarea>
-				<button onClick={(event) => { this.handleSubmit(event); }}>Send</button>
-			</form>
-		);
-	}
+    return (
+      <form className="message-form">
+        <label htmlFor="subject">Subject</label>
+        <input
+          value={newMessage.subject}
+          onChange={(event) => this.handleChange(event)}
+          name='subject' type="text" />
+        <label htmlFor="body">Body</label>
+        <textarea
+          name="body"
+          value={newMessage.body}
+          onChange={(event) => { this.handleChange(event); }}
+          cols={30} rows={10}></textarea>
+        <button onClick={(event) => { this.handleSubmit(event); }}>Send</button>
+      </form>
+    );
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
-	return {
-		addMessage: (newMessage) => dispatch(addMessage(newMessage))
-	};
+  return {
+    addMessage: (newMessage) => dispatch(addMessage(newMessage))
+  };
 };
 
 const MessageForm = connect(null, mapDispatchToProps)(MessageFormComponent);

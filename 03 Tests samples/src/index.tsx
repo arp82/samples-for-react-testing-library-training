@@ -9,8 +9,8 @@ import thunk from 'redux-thunk';
 const MessagesStore = createStore(MessagesReducer,compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
-	<Provider store={MessagesStore}>
-		<App />
-	</Provider>,
+  <Provider store={MessagesStore}>
+    <App />
+  </Provider>,
 
-	document.getElementById('root'));
+  document.getElementById('root'));
