@@ -33,19 +33,11 @@ describe('Message Form component test', () => {
 		expect(component.find('.message-form input')).toHaveLength(1);
 		expect(component.find('.message-form textarea')).toHaveLength(1);
 		expect(component.find('.message-form button')).toHaveLength(1);
-		expect(component.find('.message-form div')).toHaveLength(1);
 	});
 
 	it('should click on component button call add Message', () => {
 		component.find('button').simulate('click', event);
 		expect(addMessageSpy.calledOnce).toBe(true);
-	});
-
-	it('should click on component div',()=>{
-		truncComponent.find('.dButton').simulate('click');
-		const consoleSpy = jest.spyOn(console, 'log');
-		console.log('clicked');
-		expect(consoleSpy).toHaveBeenCalledWith('clicked');
 	});
 
 	it('should handleChange change input and textarea values', ()=>{

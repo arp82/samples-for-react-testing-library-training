@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Message } from '../../model';
 import './MessageForm.less';
 
+
 interface MessageFormProps {
     messages: Message[],
     addMessage?: (newMessage: Message) => Promise<void>,
@@ -30,9 +31,7 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
 		};
 		return newMessage;
 	}
-	handleOnClick = () => {
-		console.log("clicked")
-}
+	
 	handleSubmit(event) {
 		event.preventDefault();
 		let { addMessage } = this.props;
@@ -75,7 +74,7 @@ export class MessageFormComponent extends React.Component<MessageFormProps, Mess
 					onChange={(event) => { this.handleChange(event); }}
 					cols={30} rows={10}></textarea>
 				<button onClick={(event) => { this.handleSubmit(event); }}>Send</button>
-				<div  onClick={this.handleOnClick} className="dButton"> Hi, click me! </div>
+			
 			</form>
 		);
 	}
