@@ -25,13 +25,13 @@ describe('Message List component test', () => {
     expect(component.find('.message-section')).toHaveLength(1);
   });
 
-	it('should getMessages be called in ComponentDidMound', () =>{
-		expect(getMessagesSpy.calledOnce).toBe(true);
-	});
-	it('should handle the click event', () =>{
-		expect(
-			typeof component.find(Button).at(0).prop('onClickButton')).toBe('function');
+  it('should getMessages be called in ComponentDidMound', () =>{
+    expect(getMessagesSpy.calledOnce).toBe(true);
+  });
+  it('should handle the click event', () =>{
+    expect(
+      typeof component.find(Button).at(0).prop('onClickButton')).toBe('function');
 		
-	});
+  });
 
 });

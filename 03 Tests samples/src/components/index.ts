@@ -5,8 +5,8 @@ import {Button} from './Button/Button';
 
 
 export {
-	MessageList,
-	MessageForm,
-	MessagesSection,
-	Button,
+  MessageList,
+  MessageForm,
+  MessagesSection,
+  Button,
 };
