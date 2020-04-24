@@ -29,10 +29,6 @@ describe('Message List component test', () => {
 		expect(getMessagesSpy.calledOnce).toBe(true);
 	});
 	it('should handle the click event', () =>{
-	//	window.alert=jest.fn();
-	//	component.find(Button).at(0).prop('onClickButton');
-		//expect(window.alert).toBeCalledTimes(1);
-	
 		expect(
 			typeof component.find(Button).at(0).prop('onClickButton')).toBe('function');
 		
