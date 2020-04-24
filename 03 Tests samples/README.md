@@ -16,13 +16,12 @@
    
 - **Model-mappers** test sample:
 
-- Tests samples for events onChange ( simulate, fireEvent, ...) (Regina)
+- Tests samples for events onChange ( simulate, fireEvent, ...)
 - Tests samples for events onClick [simulateClick](./src/redux/actions/MessagesSection.test.tsx)
 - Tests samples for events onScroll 
 - Test samples for onMouseUp and onMouseDown
 - Test samples for onContextMenu
 - Test samples for onSubmit
-
 - Tests samples for useSuscribeToScroll
 - Tests samples using ref an useRef hook
 

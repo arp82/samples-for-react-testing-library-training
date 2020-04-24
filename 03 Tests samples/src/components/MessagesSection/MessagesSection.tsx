@@ -8,8 +8,8 @@ import { Message } from '../../model';
 import { Button } from '..';
 
 interface MessagesSectionProps {
-	getMessages: () => Promise<void>,
-	messages?: Message[];
+  getMessages: () => Promise<void>;
+  messages?: Message[];
 }
 
 export class MessagesSectionComponent extends React.Component<MessagesSectionProps> {
@@ -50,17 +50,20 @@ export class MessagesSectionComponent extends React.Component<MessagesSectionPro
 	}
 }
 
-const mapStateToProps = state => {
-	return {
-		messages: state.messages
-	};
+const mapStateToProps = (state) => {
+  return {
+    messages: state.messages,
+  };
 };
 
-const mapDispatchToProps = dispatch => {
-	return {
-		getMessages: () => dispatch(getAllMessages())
-	};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getMessages: () => dispatch(getAllMessages()),
+  };
 };
 
-const MessagesSection = connect(mapStateToProps, mapDispatchToProps)(MessagesSectionComponent);
+const MessagesSection = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MessagesSectionComponent);
 export { MessagesSection };
