@@ -7,10 +7,10 @@ interface ButtonProps{
 }
 
 export const Button = (props:ButtonProps) =>{
-  const handleOnClick = () => {
-    props.onClickButton(event);
-}
-  return (
-    <button onClick={handleOnClick} className="dButton"> Hi, click me! </button>
-  )
-}
+	const handleOnClick = () => {
+		props.onClickButton(event);
+	};
+	return (
+		<button onClick={handleOnClick} className="dButton"> Hi, click me! </button>
+	);
+};

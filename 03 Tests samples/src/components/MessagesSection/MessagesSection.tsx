@@ -30,8 +30,8 @@ export class MessagesSectionComponent extends React.Component<MessagesSectionPro
 		this.props.getMessages();
 	}
 	handleCallAlert(event){
-		alert("Hello! I am an alert box!");
-		console.log("alert",event);
+		alert('Hello! I am an alert box!');
+		console.log('alert',event);
 	}
 	render() {
 		const { messages } = this.props;
@@ -42,7 +42,7 @@ export class MessagesSectionComponent extends React.Component<MessagesSectionPro
 				<MessageForm messages={messages} />
 				<MessageList messages={messages} />
 				<div>
-				<Button onClickButton={(event) =>{this.handleCallAlert(event);}}></Button>
+					<Button onClickButton={(event) =>{this.handleCallAlert(event);}}></Button>
 				</div>
 			</div>
 			

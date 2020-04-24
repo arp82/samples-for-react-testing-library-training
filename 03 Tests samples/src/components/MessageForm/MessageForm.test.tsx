@@ -1,5 +1,5 @@
 import * as React from 'react';
-import  { shallow, mount }  from 'enzyme';
+import  { shallow }  from 'enzyme';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import sinon from 'sinon';
@@ -10,7 +10,7 @@ describe('Message Form component test', () => {
 	configure({ adapter: new Adapter() });
 
 
-	let component, addMessageSpy, truncComponent;
+	let component, addMessageSpy;
 	let event = {
 		preventDefault: () => {
 		}};
