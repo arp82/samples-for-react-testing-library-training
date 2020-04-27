@@ -29,9 +29,10 @@ describe('Message List component test', () => {
     expect(getMessagesSpy.calledOnce).toBe(true);
   });
   it('should handle the click event', () =>{
-    expect(
-      typeof component.find(Button).at(0).prop('onClickButton')).toBe('function');
-		
+    window.alert = jest.fn();
+    expect(typeof component.find(Button).at(0).prop('onClickButton')).toBe('function');
+    component.find(Button).at(0).prop('onClickButton')(); 
+    expect(window.alert).toHaveBeenCalledTimes(1);
   });
-
+  
 });

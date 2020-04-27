@@ -41,13 +41,11 @@ export class MessagesSectionComponent extends React.Component<
         <h1>Messages management sample, deployed</h1>
         <MessageForm messages={messages} />
         <MessageList messages={messages} />
-        <div>
-          <Button
-            onClickButton={(event) => {
-              this.handleCallAlert(event);
-            }}
-          ></Button>
-        </div>
+        <Button
+          onClickButton={(event) => {
+            this.handleCallAlert(event);
+          }}
+        />
       </div>
     );
   }
