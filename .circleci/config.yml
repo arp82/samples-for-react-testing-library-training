@@ -1,0 +1,26 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: cd '03 Tests samples' && npm install
+            - run: cd '03 Tests samples' && npm run lint-fixup
+            - run: cd '03 Tests samples' && npm run lint
+            - run: cd '03 Tests samples' && npm test
+            - add_ssh_keys:
+                fingerprints:
+                  - "41:58:ce:49:68:48:52:b8:82:f2:2e:57:4b:ba:a8:a4"
+            - run: git config --global -l
+            - run: git config --global user.email dailymp@gmail.com
+            - run: git config --global user.name dailymp
+            - run: cd '03 Tests samples' && npm run deploy
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test

@@ -1,10 +1,8 @@
 node_modules
-package-lock.json
 dist/
 *.orig
 .idea/
 src/api/resources/db.json
-db.json
 coverage/
 src/api/apiUtils.ts
 *.iml
@@ -12,3 +10,4 @@ junit.xml
 /reports/
 /.awcache
 /.vscode
+*.awcache
